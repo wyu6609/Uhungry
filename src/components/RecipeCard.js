@@ -2,7 +2,7 @@ import React from "react";
 import "./RecipeCard.css";
 const RecipeCard = ({ title, calories, image, ingredients }) => {
   return (
-    <div className="recipes pulse">
+    <div className="recipes">
       {/* <h1 className={style.recipe}>{title}</h1> */}
       <ol>
         {/* <div className="recipe">
@@ -12,7 +12,7 @@ const RecipeCard = ({ title, calories, image, ingredients }) => {
         </div> */}
       </ol>
       <p className="text">{parseInt(calories)} calories</p>
-      <img src={image} alt="" />
+      <img className="pulse" src={image} alt="" />
     </div>
   );
 };
