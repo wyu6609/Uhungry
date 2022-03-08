@@ -41,7 +41,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="col-2">
+          <div className="col-2 rotating">
             {/* <div className="form-layout">
               <div className="form-container">
                 <p className="sign-in-text">Sign in with your account</p>
@@ -76,7 +76,7 @@ function Home() {
                 </p>
               </div>
             </div> */}
-            <img className="rotating pulse" src={Logo} alt="Logo" />
+            <img className="pulse" src={Logo} alt="Logo" />
           </div>
         </div>
       </div>
