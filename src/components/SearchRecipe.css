@@ -24,6 +24,24 @@
   border-radius: 10px;
 }
 
+h1 {
+  font-size: 42px;
+  font-weight: 700px;
+  color: #fff;
+  width:515px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 700px;
+  color: #6ce5e8;
+  width:515px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .recipes {
   display: flex;
   align-items: center;

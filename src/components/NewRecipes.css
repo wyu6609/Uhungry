@@ -2,3 +2,82 @@
   min-height: 100vh;
   background-color: #424952;
 }
+.new-recipe-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
+
+.recipe-bar {
+  width: 45%;
+  border: 2.5px solid #6ce5e8;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.submit-button {
+  background: #6ce5e8;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+  width: 35%;
+  border: 2.5px solid #6ce5e8;
+}
+
+.recipes {
+  border-radius: 0px;
+  box-shadow: #424952;
+  margin: 20px 0px 0px 0px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  /* justify-content: space-around; */
+  background: white;
+  /* align-items: center; */
+  /* min-width: 40%; */
+  background-color: #424952;
+  /* display: table;
+  width: 33%;
+  table-layout: fixed */
+}
+img {
+    float: left;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+    color: #6ce5e8;
+    /* display: inline-block; */
+}
+
+/***** Shake *****/
+
+.shake:hover {
+  animation: shake 350ms infinite;
+  animation-timing-function: linear;
+  transform: scale(1.5);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+/***** Zoom *****/
+
+.zoom:hover {
+  transform: scale(1.03);
+  transition: all ease 500ms;
+}
