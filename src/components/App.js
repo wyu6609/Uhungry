@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import SearchRecipe from "./SearchRecipe";
-import ProjectList from "./ProjectList";
+
 import Favorites from "./Favorites";
 
 function App() {
