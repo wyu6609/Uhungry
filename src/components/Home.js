@@ -1,20 +1,13 @@
 import React from "react";
 import "./HomeStyles.css";
 import Logo from "../assets/logo.png";
-import {
-  FaDatabase,
-  FaAsterisk,
-  FaAccusoft,
-  FaFacebook,
-  FaTwitter,
-  FaGithub,
-} from "react-icons/fa";
+import { FaDatabase, FaAsterisk, FaAccusoft } from "react-icons/fa";
 function Home() {
   return (
     <div className="hero">
       <div className="container">
         <div className="content">
-          <div className="col-1 slide-in-left ">
+          <div className="col-1 ">
             <h1>Enrich your home cooking experience.</h1>
             <h1>
               <span className="primary-color">

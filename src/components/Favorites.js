@@ -1,7 +1,11 @@
 import React from "react";
-
+import "./Favorites.css";
 const Favorites = () => {
-  return <div>WORK IN PROGRESS</div>;
+  return (
+    <div>
+      <p>WORK IN PROGRESS</p>
+    </div>
+  );
 };
 
 export default Favorites;

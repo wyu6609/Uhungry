@@ -19,22 +19,22 @@ function NavBar() {
           <span>UHungry?®️ </span>
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item pulse">
+          <li className="nav-item pulse2">
             <NavLink exact to="/" onClick={() => setClick(false)}>
               Home
             </NavLink>
           </li>
-          <li className="nav-item pulse">
+          <li className="nav-item pulse2">
             <NavLink to="/searchrecipe" onClick={() => setClick(false)}>
               Search A Recipe
             </NavLink>
           </li>
-          <li className="nav-item pulse">
+          <li className="nav-item pulse2">
             <NavLink to="/newrecipes" onClick={() => setClick(false)}>
               Add New Recipes
             </NavLink>
           </li>
-          <li className="nav-item pulse">
+          <li className="nav-item pulse2">
             <NavLink to="/favorites" onClick={() => setClick(false)}>
               Your Favorites
             </NavLink>
