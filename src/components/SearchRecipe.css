@@ -1,0 +1,59 @@
+.App {
+  min-height: 100vh;
+  background-color: #424952;
+}
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 45%;
+  border: 2.5px solid #6ce5e8;
+  border-radius: 10px;
+}
+
+.search-button {
+  background: #6ce5e8;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.recipes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/***** Shake *****/
+
+.shake:hover {
+  animation: shake 200ms infinite;
+  animation-timing-function: linear;
+  transform: scale(1.5);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+/***** Zoom *****/
+
+.zoom:hover {
+  transform: scale(1.03);
+  transition: all ease 500ms;
+}

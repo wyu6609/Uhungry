@@ -1,0 +1,134 @@
+header {
+  width: 100%;
+  height: 100px;
+
+  background-color: var(--darkgrey);
+}
+
+header .navbar {
+  max-width: 1240px;
+  height: 100%;
+  padding: 0 1 rem;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+header span {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-self: start;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 90px;
+  height: auto;
+  display: flex;
+}
+span {
+  color: #6ce5e8;
+}
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 2em;
+  right: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+}
+
+.nav-item {
+  padding: 0 1.5rem;
+}
+
+.nav-link {
+  color: #6ce5e8;
+}
+
+@media screen and (max-width: 960px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--darkgrey);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+  }
+}
+/* ROTATING */
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 4s linear infinite;
+  -moz-animation: rotating 4s linear infinite;
+  -ms-animation: rotating 4s linear infinite;
+  -o-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
+}
+
+/***** Pulse *****/
+
+.pulse a:hover {
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
