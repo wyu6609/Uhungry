@@ -14,7 +14,7 @@ function Home() {
     <div className="hero">
       <div className="container">
         <div className="content">
-          <div className="col-1">
+          <div className="col-1 slide-in-left ">
             <h1>Enrich your home cooking experience.</h1>
             <h1>
               <span className="primary-color">

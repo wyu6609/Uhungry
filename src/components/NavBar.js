@@ -30,6 +30,11 @@ function NavBar() {
             </NavLink>
           </li>
           <li className="nav-item pulse">
+            <NavLink to="/newrecipes" onClick={() => setClick(false)}>
+              Add New Recipes
+            </NavLink>
+          </li>
+          <li className="nav-item pulse">
             <NavLink to="/favorites" onClick={() => setClick(false)}>
               Your Favorites
             </NavLink>
