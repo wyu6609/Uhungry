@@ -1,13 +1,13 @@
 .recipes {
   border-radius: 10px;
   box-shadow: #424952;
-  margin: 20px 0px 0px 0px;
+  margin: 24px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background: white;
   align-items: center;
-  min-width: 40%;
+  min-width: 30%;
   background-color: #424952;
   color: #6ce5e8;
 }
@@ -15,8 +15,8 @@ img {
   border-radius: 15px;
 }
 
-.text {
-  text-align: center;
+.AddedBtn {
+  color: green;
 }
 
 @media screen and (max-width: 960px) {
@@ -32,6 +32,14 @@ img {
     min-width: 40%;
     background-color: #424952;
     color: #6ce5e8;
+  }
+  .flip-card {
+    margin-top: 200px;
+    justify-content: space-around;
+    background-color: transparent;
+    width: 150px;
+    height: 100px;
+    /* Remove this if you don't want the 3D effect */
   }
 }
 /***** Pulse *****/
@@ -51,4 +59,54 @@ img {
   100% {
     transform: scale(1);
   }
+}
+
+/***** flip card *****/
+.flip-card {
+  margin-top: 90px;
+  justify-content: space-around;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+
+  border-radius: 15px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 15px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: #35d2d4;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+  overflow: visible;
 }
