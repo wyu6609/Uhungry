@@ -17,27 +17,6 @@ const RecipeCard = ({ title, calories, image, ingredients }) => {
 
   return (
     <div className="recipes">
-      {/* <h1 className={style.recipe}>{title}</h1> */}
-      <ol>
-        {/* <div className="recipe">
-          {ingredients.map((ingredient) => (
-            <li>{ingredient.text}</li>
-          ))}
-        </div> */}
-      </ol>
-      <p className={btnColor ? "AddedBtn" : ""}>
-        {parseInt(calories)} calories{" "}
-        <i>
-          <AiTwotoneFire />
-        </i>
-        <i>
-          <CgAddR
-            onClick={() => {
-              setBtnColor(true);
-            }}
-          />
-        </i>
-      </p>
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
@@ -49,9 +28,23 @@ const RecipeCard = ({ title, calories, image, ingredients }) => {
             />
           </div>
           <div className="flip-card-back">
-            <h1>{title}</h1>
+            <p
+              onClick={() => {
+                setBtnColor(true);
+              }}
+              className={btnColor ? "AddedBtn" : ""}
+            >
+              {parseInt(calories)} calories{" "}
+              <i>
+                <AiTwotoneFire style={{ color: "red" }} />
+              </i>
+              <i>
+                <CgAddR />
+              </i>
+            </p>
+            <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>
             <ol>
-              <div className="recipe">
+              <div className={btnColor ? "AddedBtn" : ""}>
                 {ingredients.map((ingredient) => (
                   <li key={uuid()}>{ingredient.text}</li>
                 ))}
