@@ -1,0 +1,25 @@
+{
+  "newRecipes": [
+    {
+      "title": "asdf",
+      "image": "https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg",
+      "ingredients": "asd",
+      "calories": "2134",
+      "id": 1
+    },
+    {
+      "title": "asdf",
+      "image": "https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg",
+      "ingredients": "asd",
+      "calories": "2134",
+      "id": 2
+    },
+    {
+      "title": "asdf",
+      "image": "https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg",
+      "ingredients": "asd",
+      "calories": "2134",
+      "id": 3
+    }
+  ]
+}
