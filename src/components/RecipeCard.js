@@ -3,13 +3,29 @@ import "./RecipeCard.css";
 import { AiTwotoneFire } from "react-icons/ai";
 import { CgAddR } from "react-icons/cg";
 import { v4 as uuid } from "uuid";
-const RecipeCard = ({ title, calories, image, ingredients }) => {
+const RecipeCard = ({
+  title,
+  calories,
+  image,
+  ingredients,
+  setFavRecipes,
+  favRecipes,
+  recipeObj,
+}) => {
   //card stuff
   //click state (flip)
   const [flip, setFlip] = useState(false);
   //flip function
   const clickHandler = () => {
     setFlip(!flip);
+  };
+  //onAddItem
+  const onAddItem = () => {
+    //create newObj
+
+    if (favRecipes.includes(recipeObj) === false) {
+      setFavRecipes([...favRecipes, recipeObj]);
+    }
   };
 
   //added btn color state
@@ -39,7 +55,7 @@ const RecipeCard = ({ title, calories, image, ingredients }) => {
                 <AiTwotoneFire style={{ color: "red" }} />
               </i>
               <i>
-                <CgAddR />
+                <CgAddR onClick={onAddItem} />
               </i>
             </p>
             <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>

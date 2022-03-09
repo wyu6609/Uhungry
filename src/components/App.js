@@ -11,14 +11,19 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   //favorited Recipe states
   const [favRecipes, setFavRecipes] = useState([]);
-
+  console.log(favRecipes, "added to favRecipes state");
   return (
     //routes
     <div>
       <NavBar />
       <Switch>
         <Route path="/SearchRecipe">
-          <SearchRecipe recipes={recipes} setRecipes={setRecipes} />
+          <SearchRecipe
+            recipes={recipes}
+            setRecipes={setRecipes}
+            setFavRecipes={setFavRecipes}
+            favRecipes={favRecipes}
+          />
         </Route>
         <Route path="/favorites">
           <Favorites />
