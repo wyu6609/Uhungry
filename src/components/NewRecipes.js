@@ -51,6 +51,16 @@ const NewRecipes = () => {
       });
   };
 
+  //DELETE fxn
+  const onDelete = (objID) => {
+    //delete REQUEST
+    fetch(`http://localhost:6001/newRecipes/${objID}`, {
+      method: "DELETE",
+    }).then(() => {
+      setNewRecipes(newRecipes.filter((el) => el.id !== objID));
+    });
+  };
+
   return (
     <div>
       <form className="new-recipe-form">
@@ -101,6 +111,8 @@ const NewRecipes = () => {
               calories={parseInt(recipe.calories)}
               ingredients={recipe.ingredients}
               image={recipe.image}
+              id={recipe.id}
+              onDelete={onDelete}
             />
           );
         })}

@@ -1,9 +1,16 @@
 import { useState } from "react";
 import "./RecipeCard.css";
-import { AiTwotoneFire } from "react-icons/ai";
+import { AiTwotoneFire, AiOutlineDelete } from "react-icons/ai";
 import { CgAddR } from "react-icons/cg";
 import { v4 as uuid } from "uuid";
-const NewRecipeCard = ({ title, calories, image, ingredients }) => {
+const NewRecipeCard = ({
+  id,
+  title,
+  calories,
+  image,
+  ingredients,
+  onDelete,
+}) => {
   //card stuff
   //click state (flip)
   const [flip, setFlip] = useState(false);
@@ -14,6 +21,10 @@ const NewRecipeCard = ({ title, calories, image, ingredients }) => {
 
   //added btn color state
   const [btnColor, setBtnColor] = useState(false);
+
+  const deleteItem = (id) => {
+    onDelete(id);
+  };
 
   return (
     <div className="recipes">
@@ -39,12 +50,15 @@ const NewRecipeCard = ({ title, calories, image, ingredients }) => {
                 <AiTwotoneFire style={{ color: "red" }} />
               </i>
               <i>
-                <CgAddR />
+                <AiOutlineDelete
+                  style={{ color: "red" }}
+                  onClick={() => deleteItem(id)}
+                />
               </i>
             </p>
-            <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>
+            <h1>{title}</h1>
             <ol>
-              <div className={btnColor ? "AddedBtn" : ""}>{ingredients}</div>
+              <div>{ingredients}</div>
             </ol>
           </div>
         </div>
