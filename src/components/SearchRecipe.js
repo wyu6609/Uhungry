@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SearchRecipe.css";
 import RecipeCard from "./RecipeCard";
 import { v4 as uuid } from "uuid";
-const SearchRecipe = ({ recipes, setRecipes, setFavRecipes, favRecipes }) => {
+const SearchRecipe = ({ recipes, setRecipes, onAddItem }) => {
   //search and query states
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -54,8 +54,7 @@ const SearchRecipe = ({ recipes, setRecipes, setFavRecipes, favRecipes }) => {
         {recipes.map((recipe) => (
           <RecipeCard
             recipeObj={recipe}
-            favRecipes={favRecipes}
-            setFavRecipes={setFavRecipes}
+            onAddItem={onAddItem}
             className="pulse"
             key={uuid()}
             title={recipe.recipe.label}

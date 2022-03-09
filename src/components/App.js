@@ -11,7 +11,21 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   //favorited Recipe states
   const [favRecipes, setFavRecipes] = useState([]);
-  console.log(favRecipes, "added to favRecipes state");
+  //onAddItem
+  const onAddItem = (recipeObj) => {
+    //create newObj
+
+    if (favRecipes.includes(recipeObj) === false) {
+      setFavRecipes([...favRecipes, recipeObj]);
+    }
+  };
+  //favorites del object
+  const deleteObj = (obj) => {
+    setFavRecipes(
+      favRecipes.filter((el) => el.recipe.image !== obj.recipe.image)
+    );
+  };
+
   return (
     //routes
     <div>
@@ -21,12 +35,11 @@ function App() {
           <SearchRecipe
             recipes={recipes}
             setRecipes={setRecipes}
-            setFavRecipes={setFavRecipes}
-            favRecipes={favRecipes}
+            onAddItem={onAddItem}
           />
         </Route>
         <Route path="/favorites">
-          <Favorites />
+          <Favorites favRecipes={favRecipes} deleteObj={deleteObj} />
         </Route>
         <Route path="/newrecipes">
           <NewRecipes />

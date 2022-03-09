@@ -8,8 +8,7 @@ const RecipeCard = ({
   calories,
   image,
   ingredients,
-  setFavRecipes,
-  favRecipes,
+  onAddItem,
   recipeObj,
 }) => {
   //card stuff
@@ -18,14 +17,6 @@ const RecipeCard = ({
   //flip function
   const clickHandler = () => {
     setFlip(!flip);
-  };
-  //onAddItem
-  const onAddItem = () => {
-    //create newObj
-
-    if (favRecipes.includes(recipeObj) === false) {
-      setFavRecipes([...favRecipes, recipeObj]);
-    }
   };
 
   //added btn color state
@@ -55,7 +46,7 @@ const RecipeCard = ({
                 <AiTwotoneFire style={{ color: "red" }} />
               </i>
               <i>
-                <CgAddR onClick={onAddItem} />
+                <CgAddR onClick={() => onAddItem(recipeObj)} />
               </i>
             </p>
             <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>
