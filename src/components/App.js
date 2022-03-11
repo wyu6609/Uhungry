@@ -12,13 +12,15 @@ function App() {
   //favorited Recipe states
   const [favRecipes, setFavRecipes] = useState([]);
   //onAddItem
+
   const onAddItem = (recipeObj) => {
     //create newObj
-
+    console.log(favRecipes.includes(recipeObj));
     if (favRecipes.includes(recipeObj) === false) {
       setFavRecipes([...favRecipes, recipeObj]);
     }
   };
+  console.log(favRecipes);
   console.log(favRecipes);
   //favorites del object
   const deleteObj = (obj) => {

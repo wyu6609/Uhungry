@@ -34,19 +34,19 @@ const RecipeCard = ({
               alt=""
             />
           </div>
-          <div className="flip-card-back" onClick={() => onAddItem(recipeObj)}>
-            <p
-              onClick={() => {
-                setBtnColor(true);
-              }}
-              className={btnColor ? "AddedBtn" : ""}
-            >
+          <div className="flip-card-back">
+            <p className={btnColor ? "AddedBtn" : ""}>
               {parseInt(calories)} calories{" "}
               <i>
                 <AiTwotoneFire style={{ color: "red" }} />
               </i>
               <i>
-                <CgAddR />
+                <CgAddR
+                  onClick={() => {
+                    setBtnColor(true);
+                    onAddItem(recipeObj);
+                  }}
+                />
               </i>
             </p>
             <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>
