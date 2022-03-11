@@ -73,3 +73,19 @@ img {
   height: 300px;
   width: 300px;
 }
+
+@media screen and (max-width: 960px) {
+  .submissions {
+    border-radius: 10px;
+    box-shadow: #424952;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    align-items: center;
+    min-width: 40%;
+    background-color: #424952;
+    color: #6ce5e8;
+  }
+}
