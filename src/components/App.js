@@ -19,6 +19,7 @@ function App() {
       setFavRecipes([...favRecipes, recipeObj]);
     }
   };
+  console.log(favRecipes);
   //favorites del object
   const deleteObj = (obj) => {
     setFavRecipes(

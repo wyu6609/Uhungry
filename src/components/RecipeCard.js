@@ -34,7 +34,7 @@ const RecipeCard = ({
               alt=""
             />
           </div>
-          <div className="flip-card-back">
+          <div className="flip-card-back" onClick={() => onAddItem(recipeObj)}>
             <p
               onClick={() => {
                 setBtnColor(true);
@@ -46,7 +46,7 @@ const RecipeCard = ({
                 <AiTwotoneFire style={{ color: "red" }} />
               </i>
               <i>
-                <CgAddR onClick={() => onAddItem(recipeObj)} />
+                <CgAddR />
               </i>
             </p>
             <h1 className={btnColor ? "AddedBtn" : ""}>{title}</h1>

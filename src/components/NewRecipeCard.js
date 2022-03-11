@@ -33,7 +33,7 @@ const NewRecipeCard = ({
           <div className="flip-card-front">
             <img
               onClick={clickHandler}
-              className={`pulse2 ${flip ? "flip" : ""}`}
+              className={`pulse2 new-image ${flip ? "flip" : ""}`}
               src={image}
               alt=""
             />

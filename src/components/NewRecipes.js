@@ -76,7 +76,7 @@ const NewRecipes = () => {
           className="new-recipe-input zoom"
           type="text"
           name="ingredients"
-          placeholder="New recipe ingredients..."
+          placeholder="New recipe..."
           onChange={onChangeHandler}
         />
         <input
