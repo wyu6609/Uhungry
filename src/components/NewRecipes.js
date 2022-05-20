@@ -19,11 +19,18 @@ const NewRecipes = () => {
   useEffect(() => {
     fetchNewRecipes();
   }, []);
+
+  React.useEffect(() => {
+    window.localStorage.setItem("NEW_RECIPES", JSON.stringify(newRecipes));
+  }, [newRecipes]);
+
   const fetchNewRecipes = () => {
-    fetch("http://localhost:6001/newRecipes")
-      .then((resp) => resp.json())
-      .then((data) => setNewRecipes(data));
+    const recipes = window.localStorage.getItem("NEW_RECIPES");
+    if (recipes !== null) {
+      setNewRecipes(JSON.parse(recipes));
+    }
   };
+
   //handles the inputtext
   const onChangeHandler = (event) => {
     //create new object
@@ -37,28 +44,15 @@ const NewRecipes = () => {
     event.preventDefault();
 
     // POST REQUEST
-    fetch("http://localhost:6001/newRecipes", {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newForm),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data, "success");
-        setNewRecipes([...newRecipes, data]);
-      });
+
+    setNewRecipes([...newRecipes, newForm]);
   };
 
   //DELETE fxn
   const onDelete = (objID) => {
     //delete REQUEST
-    fetch(`http://localhost:6001/newRecipes/${objID}`, {
-      method: "DELETE",
-    }).then(() => {
-      setNewRecipes(newRecipes.filter((el) => el.id !== objID));
-    });
+
+    setNewRecipes(newRecipes.filter((el) => el.title !== objID));
   };
 
   return (

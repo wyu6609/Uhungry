@@ -22,8 +22,9 @@ const NewRecipeCard = ({
   //added btn color state
   const [btnColor, setBtnColor] = useState(false);
 
-  const deleteItem = (id) => {
-    onDelete(id);
+  const deleteItem = (title) => {
+    console.log(title);
+    onDelete(title);
   };
 
   return (
@@ -52,7 +53,7 @@ const NewRecipeCard = ({
               <i>
                 <AiOutlineDelete
                   style={{ color: "red" }}
-                  onClick={() => deleteItem(id)}
+                  onClick={() => deleteItem(title)}
                 />
               </i>
             </p>
