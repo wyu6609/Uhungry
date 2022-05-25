@@ -1,5 +1,8 @@
 # UHungry?
-<a href= "https://youtu.be/e5IwFGlZJQc">Click here for demo!</a>
+
+<p align = "center"><a href= "https://youtu.be/e5IwFGlZJQc">Click here for demo!</a></p>
+<p align = "center"><a href= "https://u-hungry.netlify.app/#/">Click here to see deployed website!</a></p>
+
 ## Description
 
 UHungry is a React WebApp that allows users to search a food ingredient and receive a list of related recipes. Users can carry out different CRUD functionalities and add a new recipe that saves to the browser local storage. Utilizes routes with React Router. It is mobile responsive! Utilizes REST API 
