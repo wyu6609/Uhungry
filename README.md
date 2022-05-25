@@ -1,4 +1,4 @@
-# UHungry?
+# <h1 align = "center">UHungry?</h1>
 
 <p align = "center"><a href= "https://youtu.be/e5IwFGlZJQc">Click here for demo!</a></p>
 <p align = "center"><a href= "https://u-hungry.netlify.app/#/">Click here to see deployed website!</a></p>
